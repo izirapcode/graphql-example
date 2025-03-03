@@ -1,0 +1,20 @@
+type User {
+    id: ID!
+    name: String!
+    email: String
+    age: Int
+}
+
+type Query {
+    users: [User!]!
+    user(id: ID!): User
+}
+
+type Mutation {
+    addUser(name: String!, age: Int): User!
+}
+
+type Subscription {
+    userAdded: User
+}
+
